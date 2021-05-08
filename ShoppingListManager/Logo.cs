@@ -2,20 +2,21 @@ using System;
 
 namespace ShoppingListManager
 {
-    public class LogoFrame : Frame
+    public class Logo : Frame
     {
         public int listlength { get; set; }
-        string Title = "Welcome to the Shopping List Manager";
+        string Title = "Shopping List Manager";
         public int ItemsCount = 6;
         public string Subtitle { get; set; }
         int counter = 1;
-        
-        public LogoFrame() : base() {}
 
-        public LogoFrame(int listlength, int frameheight = 4) : base(frameheight)
+        public Logo()
+        {
+        }
+
+        public Logo(int listlength) : base(frameheight: 4)
         {
             this.listlength = listlength;
-            this.Subtitle = "You have " + ItemsCount.ToString() + " items in your list";
         }
 
         public void printLogo() // add frame side here, with each WriteLine command
@@ -37,16 +38,10 @@ namespace ShoppingListManager
                     // Console.WriteLine("Welcome to the Shopping List Manager");
                     Console.WriteLine("{0, -25} {1, -50} {2, 23}", star, Title, star);
                 }
-                else if (counter == 3)
-                {
-                    Console.WriteLine("{0, -25} {1, -50} {2, 23}", star, Subtitle, star);
-                }
-                
+
                 Console.WriteLine(" ");
                 counter++;
             }
-
-            // Console.ReadLine();
         }
     }
 }

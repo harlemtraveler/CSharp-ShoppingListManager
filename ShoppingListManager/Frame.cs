@@ -11,10 +11,10 @@ namespace ShoppingListManager
 {
     public class Frame
     {
-        int FrameLength = 100;
-        string star = "*";
-        string space = " ";
-        int counter = 1;
+        public int FrameLength = 100;
+        public string star = "*";
+        public string space = " ";
+        // int counter = 1;
         public int frameheight { get; set; }
         
         
@@ -28,42 +28,44 @@ namespace ShoppingListManager
             this.frameheight = frameheight;
         }
 
-        public void CreateFrame()
-        {
-            while (counter <= frameheight)
-            {
-                if (counter == 1 || counter == frameheight)
-                {
-                    int index = 1;
-                    while (index <= FrameLength)
-                    {
-                        Console.Write(star);
-                        index++;
-                    }
-                }
-                else
-                {
-                    int index = 1;
-                    while (index <= FrameLength)
-                    {
-                        if (index == 1 || index == FrameLength)
-                        {
-                            Console.Write(star);
-                        }
-                        else // TODO: [!] wrapped content insert here && format position on screen --> use string format, which would be defined in each frame program
-                        {
-                            Console.Write(space);
-                        }
-
-                        index++;
-                    }
-                }
-                
-                Console.WriteLine(" ");
-                counter++;
-            }
-            Console.ReadLine();
-        }
+        // public void CreateFrame()
+        // {
+        //     while (counter <= frameheight)
+        //     {
+        //         if (counter == 1 || counter == frameheight)
+        //         {
+        //             int index = 1;
+        //             while (index <= FrameLength)
+        //             {
+        //                 Console.Write(star);
+        //                 index++;
+        //             }
+        //         }
+        //         else
+        //         {
+        //             // TODO: insert an alternate to iteration --> string format from derivative 
+        //             int index = 1;
+        //             while (index <= FrameLength)
+        //             {
+        //                 if (index == 1 || index == FrameLength) // add a format command within here
+        //                 {
+        //                     // could store desired format command in a variable and pass here
+        //                     Console.Write(star);
+        //                 }
+        //                 else // TODO: [!] wrapped content insert here && format position on screen --> use string format, which would be defined in each frame program
+        //                 {
+        //                     Console.Write(space);
+        //                 }
+        //
+        //                 index++;
+        //             }
+        //         }
+        //         
+        //         Console.WriteLine(" ");
+        //         counter++;
+        //     }
+        //     Console.ReadLine();
+        // }
 
         
         
